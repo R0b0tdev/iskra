@@ -1,0 +1,433 @@
+/* Custom Styles for iSKRA Tour */
+
+/* Color Palette */
+:root {
+    --soft-pink: #FFF5F7;
+    --light-pink: #FFE5EB;
+    --medium-pink: #FFD6E0;
+    --accent-pink: #FFA3B5;
+    --dark-pink: #FF8AA5;
+    --darker-pink: #FF6B8E;
+    --text-dark: #7C2D48;
+    --text-medium: #9F4A63;
+    --text-light: #B96885;
+}
+
+/* Font Configuration */
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Reusable gradient backgrounds to replace repeated inline styles */
+.bg-gradient-main {
+    background: linear-gradient(135deg, #FFB9D4, #FFA3C9);
+}
+
+.bg-gradient-accent {
+    background: linear-gradient(135deg, #FFB9D4, #FFADD8);
+}
+
+/* Card backgrounds with shadow */
+.card-soft {
+    background: linear-gradient(135deg, #FFE8F0 0%, #FFFFFF 100%);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.card-light {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Form status messages */
+.form-message {
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.form-message-success {
+    color: #166534;
+}
+
+.form-message-error {
+    color: #991b1b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Reduce spacing globally */
+section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+h2 {
+    margin-bottom: 2.5rem !important;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header styles */
+.nav-link {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+/* Header nav padding: no vertical padding below 1300px */
+@media (max-width: 1299px) {
+    .header-nav {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+
+/* Rounded translucent header background only on desktop */
+@media (min-width: 768px) {
+    .header-nav {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(2px);
+        border-radius: 9999px;
+    }
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-pink), var(--dark-pink));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero section */
+#home {
+    position: relative;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(248, 220, 224, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%);
+    z-index: 1;
+}
+
+#home > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero title background for better readability on image (mobile only) */
+
+#home .flex.flex-col {
+  gap: 0.1rem;
+  text-align: center;
+  align-items: center;
+}
+
+#home #heroForm {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+/* Direction cards */
+.direction-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.direction-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Modal styles */
+.modal {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* FAQ accordion */
+.faq-item {
+    transition: all 0.3s ease;
+}
+
+.faq-item.active {
+    background: linear-gradient(135deg, #fce7f3 0%, #ffffff 100%);
+}
+
+.faq-answer {
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faq-item.active .faq-question span:last-child {
+    transform: rotate(45deg);
+}
+
+/* Scroll reveal */
+[data-aos] {
+    transition-duration: 0.8s;
+}
+
+/* Mobile menu */
+#mobileMenu {
+    animation: slideDown 0.3s ease;
+}
+
+/* Gradient animations */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Button hover effects */
+button, .btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover, .btn:hover {
+    filter: brightness(1.05);
+}
+
+/* Form inputs */
+input:focus {
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFE5EB;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--accent-pink), var(--dark-pink));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--dark-pink), var(--darker-pink));
+}
+
+/* Loading animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(236, 72, 153, 0.3);
+    border-radius: 50%;
+    border-top-color: #ec4899;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .direction-card img {
+        height: 200px;
+    }
+    
+    .modal-content {
+        max-width: 95%;
+    }
+}
+
+/* Responsive: header and hero at 1300px breakpoint */
+@media (max-width: 1299px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .max-w-6xl,
+  .max-w-5xl,
+  .max-w-4xl,
+  .max-w-3xl,
+  .max-w-2xl,
+  .max-w-xl,
+  .max-w-lg,
+  .max-w-md,
+  .modal-content,
+  .modal-content.max-w-4xl,
+  .max-w-5xl.mx-auto,
+  .max-w-6xl.mx-auto,
+  .max-w-4xl.w-full,
+  .max-w-3xl.mx-auto {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #home .flex.flex-col {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  #home #heroForm {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1300px) {
+  #header .desktop-nav { display: flex !important; }
+  #header #openFormBtn { display: block !important; }
+  #header #mobileMenuBtn { display: none !important; }
+
+  .hero-image-col { display: block !important; }
+  .hero-section {
+    background: linear-gradient(135deg, #FFFBFE 0%, #FFE8F0 50%, #FFE5EB 100%) !important;
+  }
+
+  #home .flex.flex-col {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  #home #heroForm {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Print styles */
+@media print {
+    header, footer, .faq-question, button {
+        display: none;
+    }
+}
+
+#aboutModal .modal-about-picture {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1299px) {
+  #aboutModal .modal-about-picture {
+    width: 80%;
+  }
+}
+
+.px-6 {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Desktop: text size for "Готовы к новому приключению?" block */
+@media (min-width: 1300px) {
+  .adventure-text {
+    font-size: 16px;
+  }
+  
+  /* Desktop: shift photo and background down by 30px */
+  .desktop-photo-bg {
+    top: calc(-1.5rem + 30px) !important;
+  }
+  
+  .desktop-photo-img {
+    margin-top: 30px;
+  }
+}
+
+
+
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-social-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.footer-social-link:hover {
+    transform: scale(1.1);
+}
+
+.footer-social-link-max-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9999px;
+    display: block;
+}

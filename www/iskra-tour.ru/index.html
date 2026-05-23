@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSKRA Tour — Ваш идеальный отдых начинается здесь</title>
+    <meta name="description" content="Турагентство iSKRA Tour подберёт тур под ваш стиль жизни: туры All Inclusive, экскурсии и индивидуальные трансферы.">
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="iSKRA Tour — Ваш идеальный отдых начинается здесь">
+    <meta property="og:description" content="iSKRA Tour подберёт тур под ваш стиль жизни: отдых All Inclusive, экскурсии и индивидуальные трансферы.">
+    <meta property="og:image" content="images/jpg/hero.jpg">
+    <link rel="icon" type="image/png" href="images/png/logo3.png">
+    
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (build output) -->
+    <link rel="stylesheet" href="css/tailwind.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Prevent horizontal scroll */
+        * {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            overflow-x: hidden !important;
+            max-width: 100vw !important;
+        }
+        
+        /* Responsive Hero adjustments for mobile */
+        @media (max-width: 1299px) {
+            #home.hero-section {
+                min-height: auto !important;
+                display: block !important;
+                align-items: flex-start !important;
+            }
+            
+            #home .container {
+                padding-top: 52px !important;
+                padding-bottom: 27px !important;
+            }
+            
+            #home.hero-section {
+                background-size: cover !important;
+                background-position: center top !important;
+                background-attachment: scroll !important;
+                background-repeat: no-repeat !important;
+            }
+            
+            /* Hide logo text in mobile */
+            #header .logo span {
+                display: none;
+            }
+            
+            /* Shift hero content to the right by 8px */
+            #home .flex.flex-col {
+                padding-left: 8px;
+            }
+        }
+        
+        /* Reduce spacing between mobile blocks in About section */
+        @media (max-width: 1299px) {
+            #about .md\\:hidden {
+                margin-bottom: 0.75rem;
+            }
+            #header nav {
+                padding-right: 5rem !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            #header {
+                background: transparent !important;
+                box-shadow: none !important;
+                backdrop-filter: none !important;
+            }
+        }
+        
+        @media (min-width: 1300px) {
+            #header {
+                background: rgba(255, 255, 255, 0.95) !important;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+                backdrop-filter: blur(12px);
+            }
+        }
+
+        
+        @media (min-width: 1300px) {
+            #home .container {
+                padding-top: 112px !important;
+                padding-bottom: 80px !important;
+            }
+        }
+
+        /* Reduce spacing between tour-op image and text in mobile */
+        @media (max-width: 1299px) {
+            #home .text-center.mt-12 {
+                margin-top: 0 !important; /* 0px instead of 48px */
+            }
+            #home h3.text-lg.font-bold.mt-8.mb-2.text-center {
+                margin-top: 1.5rem !important; /* 24px */
+            }
+            /* Move scroll indicator down by 20px in mobile */
+            #home .absolute.bottom-10.left-1\/2.transform.-translate-x-1\/2.animate-bounce {
+                bottom: 20px !important;
+            }
+        }
+
+    </style>
+</head>
+    <body class="font-sans" style="background: linear-gradient(135deg, #FFF5F7 0%, #FFE8F0 50%, #FFFBFE 100%); overflow-x: hidden; width: 100%;">
+    
+    <!-- Header -->
+    <header id="header" class="relative top-0 w-full z-50 bg-transparent transition-all duration-300 md:fixed md:top-0 md:bg-white/95 md:backdrop-blur-sm md:shadow-sm">
+        <nav class="container mx-auto px-4 py-1 flex justify-between items-center relative header-nav">
+            <div class="logo hidden md:flex items-center space-x-3">
+            <div class="relative">
+                    <picture>
+                        <source srcset="images/webp/logo3.webp" type="image/webp">
+                        <img src="images/png/logo3.png" alt="iSKRA Tour Logo" class="h-16 relative z-10 transition-all duration-300" style="filter: drop-shadow(0 4px 8px rgba(255, 185, 210, 0.5)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)); transform: translateZ(0);" decoding="async">
+                    </picture>
+                    <div class="absolute inset-0 rounded-full blur-sm opacity-50" style="background: radial-gradient(circle at 30% 30%, rgba(255, 185, 210, 0.6), transparent 70%); transform: translateZ(0);"></div>
+                    <div class="absolute inset-0 rounded-full" style="background: radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.8), transparent 60%); transform: translateZ(0);"></div>
+                </div>
+                <span class="text-2xl font-bold" style="color: #000000; text-align: center;">iSKRA Tour</span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-6 text-lg desktop-nav">
+                <li><a href="#home" class="nav-link transition hover:opacity-80" style="color: #000000;">Главная</a></li>
+                <li><a href="#about" class="nav-link transition hover:opacity-80" style="color: #000000;">О нас</a></li>
+                <li><a href="#directions" class="nav-link transition hover:opacity-80" style="color: #000000;">Направления</a></li>
+                <li><a href="#services" class="nav-link transition hover:opacity-80" style="color: #000000;">Услуги</a></li>
+                <li><a href="#how-it-works" class="nav-link transition hover:opacity-80" style="color: #000000;">Как мы работаем</a></li>
+                <li><a href="#testimonials" class="nav-link transition hover:opacity-80" style="color: #000000;">Отзывы</a></li>
+                <li><a href="#faq" class="nav-link transition hover:opacity-80" style="color: #000000;">FAQ</a></li>
+                <li><a href="#contacts" class="nav-link transition hover:opacity-80" style="color: #000000;">Контакты</a></li>
+            </ul>
+            
+            <a href="https://t.me/iskra_tour_bot" target="_blank" class="hidden md:flex items-center gap-2 px-6 py-2 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold" style="background: linear-gradient(135deg, #ffb9d3 0%, #FFFFFF 100%); color: #000000; text-decoration: none;">
+                <svg class="w-5 h-5" fill="#000000" viewBox="0 0 24 24">
+                    <path d="M9.036 14.572l-.377 5.31c.54 0 .84-.232 1.157-.513l2.734-2.53 5.716 4.182c1.053.57 1.826.285 2.11-1.04l3.77-17.52c.377-1.515-.566-2.09-1.6-1.8L1.93 8.79c-1.515.54-1.515 1.44-.27 1.854l5.28 1.6 12.29-7.77c.567-.36 1.063-.18.675.216L9.036 14.572z"/>
+                </svg>
+                Написать менеджеру
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <!-- Mobile Menu Button removed for screens under 1300px -->
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden border-t backdrop-blur-md" style="background-color: rgba(255, 255, 255, 0.95); position: fixed; top: 70px; right: 20px; width: 260px; max-width: calc(100% - 40px); z-index: 40; box-shadow: -2px 4px 10px rgba(0,0,0,0.1); border-radius: 20px;">
+            <div class="text-center pt-[10px] pb-3 border-b border-pink-100">
+                <img src="images/png/logo_menu.png" alt="iSKRA Tour" class="mx-auto w-32 h-auto" loading="lazy">
+            </div>
+            <ul class="px-4 py-4 space-y-2.5">
+                <li><a href="#home" class="block py-[5px] px-3 rounded-lg text-xl font-bold transition-all duration-200 hover:bg-pink-50 active:bg-pink-100 active:scale-95" style="color: #000000;">Главная</a></li>
+                <li><a href="#about" class="block py-[5px] px-3 rounded-lg text-xl font-bold transition-all duration-200 hover:bg-pink-50 active:bg-pink-100 active:scale-95" style="color: #000000;">О нас</a></li>
+                <li><a href="#directions" class="block py-[5px] px-3 rounded-lg text-xl font-bold transition-all duration-200 hover:bg-pink-50 active:bg-pink-100 active:scale-95" style="color: #000000;">Направления</a></li>
+                <li><a href="#services" class="block py-[5px] px-3 rounded-lg text-xl font-bold transition-all duration-200 hover:bg-pink-50 active:bg-pink-100 active:scale-95" style="color: #000000;">Услуги</a></li>
+                <li><a href="#how-it-works" class="block py-[5px] px-3 rounded-lg text-xl font-bold transition-all duration-200 hover:bg-pink-50 active:bg-pink-100 active:scale-95" style="color: #000000;">Как мы работаем</a></li>
+                <li><a href="#testimonials" class="block py-[5px] px-3 rounded-lg text-xl font-bold transition-all duration-200 hover:bg-pink-50 active:bg-pink-100 active:scale-95" style="color: #000000;">Отзывы</a></li>
+                <li><a href="#faq" class="block py-[5px] px-3 rounded-lg text-xl font-bold transition-all duration-200 hover:bg-pink-50 active:bg-pink-100 active:scale-95" style="color: #000000;">FAQ</a></li>
+                <li><a href="#contacts" class="block py-[5px] px-3 rounded-lg text-xl font-bold transition-all duration-200 hover:bg-pink-50 active:bg-pink-100 active:scale-95" style="color: #000000;">Контакты</a></li>
+            </ul>
+            <div class="px-4 pb-[10px]">
+                <a href="https://t.me/iskra_tour_bot" target="_blank" class="block text-center w-[calc(100%-24px)] mx-auto py-3 rounded-lg font-semibold text-[18px] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105" style="background: #ffb9d3; color: #000000; text-decoration: none; margin-bottom: 10px;">
+                    Подобрать тур
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden hero-section" style="background-image: url('images/jpg/hero.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container mx-auto px-4 relative z-10 max-w-5xl" style="padding-top: 60px; padding-bottom: 80px;">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+                
+                <!-- Left Side - Content -->
+                <div data-aos="fade-right" class="flex flex-col items-center md:items-start text-center md:text-left">
+                    <h1 class="text-4xl md:text-7xl font-bold.leading-tight" style="color: #000000; margin-bottom: 1.5rem; margin-top: -10px; font-size: 42px; font-weight: 800;">
+                        Ваш идеальный<br>
+                        <span style="color: #ffb9d2;">отдых</span> начинается здесь
+                    </h1>
+                    
+                    <h3 class="text-lg font-bold mb-4 text-center" style="color: #000000; font-size: 150%;">Заполните форму и получите подборку туров в течение 30 минут!</h3>
+
+                    <!-- Hero Form -->
+                    <form id="heroForm" class="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-2xl w-full max-w-lg mb-10" style="border: 2px solid #FFD6E0;">
+                        <!-- Honeypot field: скрытое поле, которое не должен заполнять человек -->
+                        <div style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">
+                            <label>Ваш сайт</label>
+                            <input type="text" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        <div class="grid gap-4 mb-2">
+                            <input type="text" name="name" placeholder="Ваше имя" required 
+                                   class="px-4 py-3 rounded-lg focus:outline-none transition" style="border: 2px solid #FFE5EB;">
+                            
+                            <select name="contact_method" id="heroContactMethod" required 
+                                    class="px-4 py-3 rounded-lg focus:outline-none transition" style="border: 2px solid #FFE5EB;">
+                                <option value="">Удобный способ связи</option>
+                                <option value="phone">Звонок</option>
+                                <option value="whatsapp">WhatsApp</option>
+                                <option value="telegram">Telegram</option>
+                                <option value="max">MAX</option>
+                                <option value="email">Почта</option>
+                            </select>
+                            
+                            <input type="text" name="contact" id="heroContact" placeholder="Контакт" required 
+                                   class="px-4 py-3 rounded-lg focus:outline-none transition" style="border: 2px solid #FFE5EB; display: none;">
+                            
+                            <textarea name="wishes" placeholder="Пожелания по туру: даты, число туристов, направление и т.д." rows="3"
+                                      class="px-4 py-3 rounded-lg focus:outline-none transition" style="border: 2px solid #FFE5EB;"></textarea>
+
+                            <div class="flex items-start gap-2">
+                                <input type="checkbox" id="heroFormConsent" name="consent" class="mt-1 w-5 h-5 rounded border-gray-300 text-pink-500 focus:ring-pink-500">
+                                <label for="heroFormConsent" class="text-sm text-gray-700 cursor-pointer">
+                                    <button type="button" id="openPrivacyFromHero" class="text-pink-500 hover:text-pink-600 underline text-left" style="font-size: 16px;">Даю согласие на обработку персональных данных</button>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="text-white px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-medium bg-gradient-main">
+                            Узнать про тур
+                            </button>
+                        </div>
+                        <div id="heroFormMessage" class="form-message hidden"></div>
+                    </form>
+                    
+                    <!-- Why Trust Me Section -->
+                    <div class="mb-0" data-aos="fade-up">
+                        <h3 class="text-lg font-bold mb-4 text-center" style="color: #000000; font-size: 150%;">Почему стоит доверить мне подбор тура?</h3>
+                        
+                        <!-- Carousel Container with Static Background -->
+                        <div class="relative mb-6">
+                            <!-- Static Background Layer -->
+                            <div class="relative bg-white rounded-2xl p-4 shadow-xl border-2" style="border-color: #FFE5EB; min-height: 210px;">
+                                <!-- Carousel Container -->
+                                <div class="relative" style="overflow: hidden;">
+                                    <div id="benefitsCarousel" class="flex transition-transform duration-1000 ease-in-out" style="will-change: transform;">
+                                        <!-- Rectangle 1 -->
+                                        <div class="flex-shrink-0" style="width: 100%; box-sizing: border-box;">
+                                            <div class="bg-white flex flex-col" style="min-height: 182px; padding: 1rem;">
+                                                <div class="space-y-6 flex-grow" style="padding-left: calc(1rem + 5px);">
+                                                    <blockquote class="text-sm italic leading-relaxed" style="color: #000000; font-size: 16px;">
+                                                        "Подберу тур в любую страну и направление."
+                                                    </blockquote>
+                                                    <blockquote class="text-sm italic leading-relaxed" style="color: #000000; font-size: 16px;">
+                                                        "Учту все пожелания: бюджет, даты, формат отдыха."
+                                                    </blockquote>
+                                                    <blockquote class="text-sm italic leading-relaxed" style="color: #000000; font-size: 16px;">
+                                                        "Организую вылет из любого города России."
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                                <!-- Rectangle 2 -->
+                                        <div class="flex-shrink-0" style="width: 100%; box-sizing: border-box;">
+                                            <div class="bg-white flex flex-col" style="min-height: 182px; padding: 1rem;">
+                                                <div class="space-y-4 flex-grow" style="padding-left: calc(1rem + 5px);">
+                                                    <blockquote class="text-sm italic leading-relaxed" style="color: #000000; font-size: 16px;">
+                                                        "Работаю онлайн — удобно, быстро и прозрачно."
+                                                    </blockquote>
+                                                    <blockquote class="text-sm italic leading-relaxed" style="color: #000000; font-size: 16px;">
+                                                        "Цены — напрямую от проверенных туроператоров (в моей подборке цены обновляются онлайн)."
+                                                    </blockquote>
+                                                    <blockquote class="text-sm italic leading-relaxed" style="color: #000000; font-size: 16px;">
+                                                        "Вы ничего не переплачиваете — мою работу оплачивает туроператор, а не вы."
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Rectangle 3 -->
+                                        <div class="flex-shrink-0" style="width: 100%; box-sizing: border-box;">
+                                            <div class="bg-white flex flex-col" style="min-height: 182px; padding: 1rem;">
+                                                <div class="space-y-4 flex-grow" style="padding-left: calc(1rem + 5px);">
+                                                    <blockquote class="text-sm italic leading-relaxed" style="color: #000000; font-size: 16px;">
+                                                        "Работаю официально, в составе лицензированного турагентства."
+                                                    </blockquote>
+                                                    <blockquote class="text-sm italic leading-relaxed" style="color: #000000; font-size: 16px;">
+                                                        "Сотрудничаю только с проверенными компаниями."
+                                                    </blockquote>
+                                                    <blockquote class="text-sm italic leading-relaxed" style="color: #000000; font-size: 16px;">
+                                                        "Всегда на связи — до, во время и после отпуска."
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Indicators Overlay -->
+                                    <div id="carouselIndicators" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2 z-10" style="bottom: 6px;"></div>
+                                </div>
+                                
+                                <!-- Navigation Arrows Overlay -->
+                                <button onclick="prevSlide()" class="absolute top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center transition-all duration-300 hover:scale-110 z-10" style="color: #ffb9d2; left: 5px;">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                </button>
+                                <button onclick="nextSlide()" class="absolute top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center transition-all duration-300 hover:scale-110 z-10" style="color: #ffb9d2; right: 5px;">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Right Side - Image -->
+                <div class="relative hidden md:block hero-image-col" data-aos="fade-left">
+                    <div class="relative h-full" style="box-shadow: 0 30px 80px rgba(255, 138, 165, 0.25);">
+                        <div class="absolute -top-6 -right-6 w-full h-full rounded-3xl" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);"></div>
+                        <picture class="relative block w-full h-full">
+                            <source srcset="images/webp/hero.webp" type="image/webp">
+                            <img src="images/jpg/hero.jpg" alt="Путешествие" class="relative w-full h-full object-cover rounded-3xl shadow-2xl" style="object-position: center;" fetchpriority="high">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Elements After Grid -->
+            <div class="text-center mt-8">
+                <h3 class="text-lg font-bold mb-2 text-center" style="color: #000000; font-size: 150%;">Работаю с лучшими туроператорами</h3>
+
+                <!-- Tour Operator Photo (visible up to 1300px) -->
+                <div class="mt-6 tour-op-image mx-auto" style="display: block; max-width: 768px; margin-bottom: 20px;">
+                    <picture>
+                        <source srcset="images/webp/tour-op.webp" type="image/webp">
+                        <img src="images/png/tour-op.png" alt="Tour Operator" class="w-full h-auto" style="max-width: 100%; object-fit: contain;" loading="lazy">
+                    </picture>
+                </div>
+
+                <!-- Telegram CTA -->
+                <a href="https://t.me/iskratour" target="_blank" class="inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-2xl transition-all duration-300 hover:scale-105 shadow-xl mt-6 bg-gradient-main" style="color: white; text-decoration: none; margin-bottom: 20px;">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.21-1.13-.33-1.09-.7.02-.17.25-.35.7-.52 2.74-1.2 4.56-1.99 5.79-2.4 2.79-1.13 3.37-1.33 3.75-1.34.33-.01.52.04.71.18.15.12.21.28.2.47-.01.19-.04.22-.03.33 0 .11.02.14.03.23-.06.07-.02.12-.02.21 0 .03.01.05.01.08-.01.02-.02.02-.04.03z"/>
+                    </svg>
+                    <span class="font-semibold md:hidden">Telegram канал iSKRA Tour</span>
+                    <span class="font-semibold hidden md:inline">Посмотреть подборки туров в Telegram</span>
+                </a>
+            </div>
+
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce" data-aos="fade-up" data-aos-delay="500">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative overflow-hidden" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 50%, #FFE8F0 100%);">
+        <!-- Background decorative elements -->
+        <div class="absolute top-20 left-10 w-32 h-32 rounded-full opacity-10" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);"></div>
+        <div class="absolute bottom-20 right-10 w-24 h-24 rounded-full opacity-10" style="background: linear-gradient(135deg, #FFADD8, #FFB9D4);"></div>
+        
+        <div class="container mx-auto px-4 relative z-10 max-w-5xl">
+            <div class="max-w-6xl mx-auto">
+                <!-- Section Title -->
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: #000000;">
+                        Что такое <span style="color: #ffb9d2;">iSKRA Tour</span>
+            </h2>
+                </div>
+
+                <!-- Main Content -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12" data-aos="fade-up">
+                    <!-- 1. Introduction - Mobile order 1 -->
+                    <div class="md:hidden relative overflow-hidden rounded-2xl p-6 shadow-xl transition-all duration-300 hover:shadow-2xl group" style="background: linear-gradient(135deg, #FFE8F0 0%, #FFFFFF 100%); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-200 to-transparent rounded-bl-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                        <h3 class="text-xl font-bold mb-3 relative z-10" style="color: #000000;">Давайте знакомиться</h3>
+                        <p class="text-base leading-relaxed mb-3 relative z-10" style="color: #000000;">
+                            Я — <strong style="background: linear-gradient(135deg, #FFB9D4, #FFADD8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Юлия Скрябина</strong>, ваш личный турагент и основатель iSKRA Tour.
+                        </p>
+                        <p class="text-base leading-relaxed relative z-10" style="color: #000000;">
+                            Название моего агентства — не случайность: <strong style="background: linear-gradient(135deg, #FFB9D4, #FFADD8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">"Искра"</strong> не только навеяно моей фамилией, но это еще и то, с чего начинается каждое вдохновляющее путешествие. Я работаю с искрой в глазах, потому что по-настоящему люблю то, чем занимаюсь.
+                        </p>
+                    </div>
+
+                    <!-- 2. Photo - Mobile order 2 -->
+                    <div class="md:hidden flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative w-full" style="max-width: 85%;">
+                            <div class="absolute -top-6 -left-6 w-full h-full rounded-2xl" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);"></div>
+                            <picture class="relative block">
+                                <source srcset="images/webp/obo_mne.webp" type="image/webp">
+                                <img src="images/jpg/obo_mne.jpg" alt="Юлия Скрябина - основатель iSKRA Tour" class="relative w-full aspect-square object-cover rounded-2xl shadow-2xl" style="object-position: center top;">
+                            </picture>
+                        </div>
+                        <button type="button" data-open-about-modal class="mt-6 inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl transition-all duration-300 hover:scale-105 shadow-xl text-white font-semibold bg-gradient-main" style="width: 298.75px;">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"></path>
+                            </svg>
+                            Подробнее обо мне
+                        </button>
+                </div>
+                
+                    <!-- Desktop Layout -->
+                    <!-- Left Side - Photo -->
+                    <div class="hidden md:flex md:flex-col md:gap-6 desktop-photo-container" data-aos="fade-right">
+                        <div class="relative">
+                            <div class="absolute -top-6 -left-6 w-full h-full rounded-2xl desktop-photo-bg" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);"></div>
+                            <picture class="relative block">
+                                <source srcset="images/webp/obo_mne.webp" type="image/webp">
+                                <img src="images/jpg/obo_mne.jpg" alt="Юлия Скрябина - основатель iSKRA Tour" class="relative w-full aspect-square object-cover rounded-2xl shadow-2xl desktop-photo-img" style="object-position: center top;">
+                            </picture>
+                        </div>
+                    </div>
+                
+                    <!-- Right Side - Content (Desktop) -->
+                    <div class="hidden md:flex md:flex-col" data-aos="fade-left" style="gap: 1.5rem;">
+                        <div class="relative overflow-hidden rounded-2xl p-6 shadow-xl transition-all duration-300 hover:shadow-2xl group" style="background: linear-gradient(135deg, #FFE8F0 0%, #FFFFFF 100%); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-200 to-transparent rounded-bl-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                            <h3 class="text-xl font-bold mb-3 relative z-10" style="color: #000000;">Давайте знакомиться</h3>
+                            <p class="text-base leading-relaxed mb-3 relative z-10" style="color: #000000;">
+                                Я — <strong style="background: linear-gradient(135deg, #FFB9D4, #FFADD8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Юлия Скрябина</strong>, ваш личный турагент и основатель iSKRA Tour.
+                            </p>
+                            <p class="text-base leading-relaxed relative z-10" style="color: #000000;">
+                                Название моего агентства — не случайность: <strong style="background: linear-gradient(135deg, #FFB9D4, #FFADD8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">"Искра"</strong> не только навеяно моей фамилией, но это еще и то, с чего начинается каждое вдохновляющее путешествие. Я работаю с искрой в глазах, потому что по-настоящему люблю то, чем занимаюсь.
+                            </p>
+                        </div>
+                        <div class="relative overflow-hidden rounded-2xl p-6 shadow-xl text-left transition-all duration-300 hover:shadow-2xl group" style="background: linear-gradient(135deg, #FFE8F0 0%, #FFFFFF 100%); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-200 to-transparent rounded-bl-full.opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                            <h3 class="text-lg font-bold mb-3 relative z-10" style="color: #000000;">Готовы к новому приключению?</h3>
+                            <p class="text-sm leading-relaxed mb-4 relative z-10 adventure-text" style="color: #000000;">
+                                Если вы ищете не просто тур, а вдохновляющее и продуманное путешествие, добро пожаловать в iSKRA Tour. Я помогу зажечь ту самую искру, с которой начинается ваше новое приключение.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex justify-center mt-8">
+                    <button type="button" data-open-about-modal class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl transition-all duration-300 hover:scale-105 shadow-xl text-white font-semibold bg-gradient-main" style="width: 298.75px;">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5-5 5M6 12h12"></path>
+                        </svg>
+                        Подробнее обо мне
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="afterAbout"></div>
+
+    <!-- Directions Section -->
+    <section id="directions" class="py-12" style="background: linear-gradient(180deg, #FFFBFE 0%, #FFF0F5 50%, #FFE8F0 100%);">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-10" data-aos="fade-up" style="color: #000000;">
+                Актуальные <span style="color: #ffb9d2;">направления</span>
+            </h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <!-- Turkey -->
+                <div class="direction-card group" data-aos="zoom-in" data-country="turkey" data-name="Турция">
+                    <picture>
+                        <source srcset="images/webp/turkey.webp" type="image/webp">
+                        <img src="images/jpg/turkey.jpg" alt="Турция" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-xl font-semibold" style="color: #000000;">Турция</h3>
+                    </div>
+                </div>
+                
+                <!-- Egypt -->
+                <div class="direction-card group" data-aos="zoom-in" data-aos-delay="100" data-country="egypt" data-name="Египет">
+                    <picture>
+                        <source srcset="images/webp/egypt.webp" type="image/webp">
+                        <img src="images/jpg/egypt.jpg" alt="Египет" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-xl font-semibold" style="color: #000000;">Египет</h3>
+                    </div>
+                </div>
+                
+                <!-- Thailand -->
+                <div class="direction-card group" data-aos="zoom-in" data-aos-delay="200" data-country="thailand" data-name="Таиланд">
+                    <picture>
+                        <source srcset="images/webp/thailand.webp" type="image/webp">
+                        <img src="images/jpg/thailand.jpg" alt="Таиланд" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-xl font-semibold" style="color: #000000;">Таиланд</h3>
+                    </div>
+                </div>
+                
+                <!-- UAE -->
+                <div class="direction-card group" data-aos="zoom-in" data-aos-delay="300" data-country="uae" data-name="ОАЭ">
+                    <picture>
+                        <source srcset="images/webp/uae.webp" type="image/webp">
+                        <img src="images/jpg/uae.jpg" alt="ОАЭ" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-xl font-semibold" style="color: #000000;">ОАЭ</h3>
+                    </div>
+                </div>
+                
+                <!-- Vietnam -->
+                <div class="direction-card group" data-aos="zoom-in" data-aos-delay="400" data-country="vietnam" data-name="Вьетнам">
+                    <picture>
+                        <source srcset="images/webp/vietnam.webp" type="image/webp">
+                        <img src="images/jpg/vietnam.jpg" alt="Вьетнам" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-xl font-semibold" style="color: #000000;">Вьетнам</h3>
+                    </div>
+                </div>
+                
+                <!-- Maldives -->
+                <div class="direction-card group" data-aos="zoom-in" data-aos-delay="500" data-country="maldives" data-name="Мальдивы">
+                    <picture>
+                        <source srcset="images/webp/maldives.webp" type="image/webp">
+                        <img src="images/jpg/maldives.jpg" alt="Мальдивы" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-xl font-semibold" style="color: #000000;">Мальдивы</h3>
+                    </div>
+                </div>
+                
+                <!-- Bali -->
+                <div class="direction-card group" data-aos="zoom-in" data-aos-delay="600" data-country="bali" data-name="Бали">
+                    <picture>
+                        <source srcset="images/webp/bali.webp" type="image/webp">
+                        <img src="images/jpg/bali.jpg" alt="Бали" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-xl font-semibold" style="color: #000000;">Бали</h3>
+                    </div>
+                </div>
+                
+                <!-- Sochi -->
+                <div class="direction-card group" data-aos="zoom-in" data-aos-delay="700" data-country="sochi" data-name="Сочи">
+                    <picture>
+                        <source srcset="images/webp/sochi.webp" type="image/webp">
+                        <img src="images/jpg/sochi.jpg" alt="Сочи" class="w-full h-64 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-xl font-semibold" style="color: #000000;">Сочи</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 md:hidden text-center">
+                <a href="#ctaForm" data-no-smooth="true" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-base font-semibold shadow-md text-white transition-all duration-300 hover:scale-105 hover:shadow-xl" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8); text-decoration: none; width: 100%; max-width: 298.75px;">
+                    Отправить заявку
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 50%, #FFF0F5 100%);">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-10" data-aos="fade-up" style="color: #000000;">
+                Наши <span style="color: #ffb9d2;">услуги</span>
+            </h2>
+            
+            <!-- Mobile condensed card -->
+            <div class="md:hidden" data-aos="fade-up">
+                <div class="relative overflow-hidden rounded-3xl px-6 py-8 shadow-2xl border border-pink-100" style="background: linear-gradient(150deg, rgba(255, 221, 232, 0.95) 0%, #FFFFFF 55%, rgba(255, 221, 232, 0.85) 100%);">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full opacity-20" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);"></div>
+                    <div class="relative">
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="flex items-start gap-4 rounded-2xl px-4 py-3 bg-white/80 backdrop-blur-sm shadow-sm">
+                            <div class="flex-shrink-0 w-12 h-12">
+                                <picture>
+                                    <source srcset="images/webp/all-inclusive.webp" type="image/webp">
+                                    <img src="images/png/all-inclusive.png" alt="All Inclusive" class="w-full h-full object-contain" loading="lazy">
+                                </picture>
+                            </div>
+                                <div>
+                                    <p class="font-semibold" style="color: #000000;">Туры All Inclusive</p>
+                                    <p class="text-sm text-gray-600">Подбор отелей и туров «под ключ» напрямую от проверенных туроператоров.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 rounded-2xl px-4 py-3 bg-white/80 backdrop-blur-sm shadow-sm">
+                                <div class="flex-shrink-0 w-12 h-12">
+                                    <picture>
+                                        <source srcset="images/webp/excursion.webp" type="image/webp">
+                                        <img src="images/png/excursion.png" alt="Экскурсии" class="w-full h-full object-contain" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div>
+                                    <p class="font-semibold" style="color: #000000;">Экскурсии</p>
+                                    <p class="text-sm text-gray-600">Авторские маршруты и проверенные экскурсии - море эмоций и впечатлений.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 rounded-2xl px-4 py-3 bg-white/80 backdrop-blur-sm shadow-sm">
+                                <div class="flex-shrink-0 w-12 h-12">
+                                    <picture>
+                                        <source srcset="images/webp/transfer.webp" type="image/webp">
+                                        <img src="images/png/transfer.png" alt="Трансфер" class="w-full h-full object-contain" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div>
+                                    <p class="font-semibold" style="color: #000000;">Индивидуальные трансферы</p>
+                                    <p class="text-sm text-gray-600">В любом городе мира по доступным ценам</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 rounded-2xl px-4 py-3 bg-white/80 backdrop-blur-sm shadow-sm">
+                                <div class="flex-shrink-0 w-12 h-12">
+                                    <picture>
+                                        <source srcset="images/webp/insurance.webp" type="image/webp">
+                                        <img src="images/png/insurance.png" alt="Страхование" class="w-full h-full object-contain" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div>
+                                    <p class="font-semibold" style="color: #000000;">Страхование</p>
+                                    <p class="text-sm text-gray-600">Оформление страховых полисов на любой случай жизни.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 rounded-2xl px-4 py-3 bg-white/80 backdrop-blur-sm shadow-sm">
+                                <div class="flex-shrink-0 w-12 h-12">
+                                    <picture>
+                                        <source srcset="images/webp/yacht.webp" type="image/webp">
+                                        <img src="images/png/yacht.png" alt="Аренда яхт" class="w-full h-full object-contain" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div>
+                                    <p class="font-semibold" style="color: #000000;">Аренда яхт</p>
+                                    <p class="text-sm text-gray-600">По доступным ценам в ОАЭ и Турции</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 rounded-2xl px-4 py-3 bg-white/80 backdrop-blur-sm shadow-sm">
+                                <div class="flex-shrink-0 w-12 h-12">
+                                    <picture>
+                                        <source srcset="images/webp/dagestan.webp" type="image/webp">
+                                        <img src="images/png/dagestan.png" alt="Авторские туры" class="w-full h-full object-contain" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div>
+                                    <p class="font-semibold" style="color: #000000;">Дагестан</p>
+                                    <p class="text-sm text-gray-600">Эксклюзивная авторская программа с полным сопровождением</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <a href="#contacts" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-base font-semibold shadow-md text-white transition-all duration-300 hover:scale-105 hover:shadow-xl" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8); text-decoration: none; width: 298.75px;">
+                                Отправить заявку
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hidden md:grid md:grid-cols-3 gap-6">
+                <div class="p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="100" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center rounded-full" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);">
+                        <div class="w-11 h-11">
+                            <picture>
+                                <source srcset="images/webp/all-inclusive.webp" type="image/webp">
+                                <img src="images/png/all-inclusive.png" alt="Туры All Inclusive" class="w-full h-full object-contain" loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="color: #000000;">Туры All Inclusive</h3>
+                    <p style="color: #000000;">Подбор отелей и туров «под ключ» напрямую от проверенных туроператоров.</p>
+                </div>
+                
+                <div class="p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="200" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center rounded-full" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);">
+                        <div class="w-11 h-11">
+                            <picture>
+                                <source srcset="images/webp/excursion.webp" type="image/webp">
+                                <img src="images/png/excursion.png" alt="Экскурсионные туры" class="w-full h-full object-contain" loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="color: #000000;">Экскурсии</h3>
+                    <p style="color: #000000;">Авторские маршруты и проверенные экскурсии - море эмоций и впечатлений.</p>
+                </div>
+                
+                <div class="p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="300" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center rounded-full" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);">
+                        <div class="w-11 h-11">
+                            <picture>
+                                <source srcset="images/webp/transfer.webp" type="image/webp">
+                                <img src="images/png/transfer.png" alt="Индивидуальные трансферы" class="w-full h-full object-contain" loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="color: #000000;">Индивидуальные трансферы</h3>
+                    <p style="color: #000000;">В любом городе мира по доступным ценам</p>
+                </div>
+                
+                <div class="p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="400" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center rounded-full" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);">
+                        <div class="w-11 h-11">
+                            <picture>
+                                <source srcset="images/webp/insurance.webp" type="image/webp">
+                                <img src="images/png/insurance.png" alt="Страхование" class="w-full h-full object-contain" loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="color: #000000;">Страхование</h3>
+                    <p style="color: #000000;">Оформление страховых полисов на любой случай жизни.</p>
+                </div>
+                
+                <div class="p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="500" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center rounded-full" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);">
+                        <div class="w-11 h-11">
+                            <picture>
+                                <source srcset="images/webp/yacht.webp" type="image/webp">
+                                <img src="images/png/yacht.png" alt="Аренда яхт" class="w-full h-full object-contain" loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="color: #000000;">Аренда яхт</h3>
+                    <p style="color: #000000;">По доступным ценам в ОАЭ и Турции</p>
+                </div>
+                
+                <div class="p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="600" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center rounded-full" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);">
+                        <div class="w-11 h-11">
+                            <picture>
+                                <source srcset="images/webp/dagestan.webp" type="image/webp">
+                                <img src="images/png/dagestan.png" alt="Авторские туры" class="w-full h-full object-contain" loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="color: #000000;">Дагестан</h3>
+                    <p style="color: #000000;">Эксклюзивная авторская программа с полным сопровождением</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram Section -->
+    <section class="py-8" style="background: linear-gradient(90deg, #FFE8F0 0%, #FFFFFF 100%);">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-8" data-aos="fade-up" style="color: #000000;">
+                Подписывайтесь на наш <span style="color: #ffb9d2;">Telegram-канал</span>
+            </h2>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="md:grid md:grid-cols-2 gap-6 items-center">
+                    
+                    <!-- Mobile condensed wrapper -->
+                    <div class="md:hidden" data-aos="fade-up">
+                        <div class="flex flex-col items-center text-center gap-6 px-6 py-6 rounded-3xl shadow-xl border border-pink-100" style="background: linear-gradient(150deg, rgba(255, 221, 232, 0.85) 0%, #FFFFFF 60%, rgba(255, 221, 232, 0.75) 100%);">
+                            <picture>
+                                <source srcset="images/webp/telegram-phone.webp" type="image/webp">
+                                <img src="images/png/telegram-phone.png" alt="Telegram канал iSKRA Tour" class="w-40 h-auto" style="filter: drop-shadow(0 10px 25px rgba(255, 138, 165, 0.3));" loading="lazy" decoding="async">
+                            </picture>
+                            <p class="text-lg font-semibold" style="color: #000000;">
+                                Здесь ежедневно публикуем актуальные подборки туров, советы и идеи для путешествий
+                            </p>
+                            <a href="https://t.me/iskratour" target="_blank" 
+                               class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white transition-all duration-300 shadow-lg hover:shadow-xl bg-gradient-main" style="margin-bottom: 15px;">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.21-1.13-.33-1.09-.7.02-.17.25-.35.7-.52 2.74-1.2 4.56-1.99 5.79-2.4 2.79-1.13 3.37-1.33 3.75-1.34.33-.01.52.04.71.18.15.12.21.28.2.47-.01.19-.04.22-.03.33 0 .11.02.14.03.23-.06.07-.02.12-.02.21 0 .03.01.05.01.08-.01.02-.02.02-.04.03z"/>
+                                </svg>
+                                <span class="font-semibold">Открыть Telegram-канал</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Desktop layout -->
+                    <div class="hidden md:block" data-aos="fade-right">
+                        <picture>
+                            <source srcset="images/webp/telegram-phone.webp" type="image/webp">
+                            <img src="images/png/telegram-phone.png" alt="Telegram канал iSKRA Tour" class="mx-auto md:mx-0" style="width: 70%; max-width: 313px; display: block; filter: drop-shadow(0 15px 40px rgba(255, 138, 165, 0.3));" loading="lazy" decoding="async">
+                        </picture>
+                    </div>
+                    
+                    <!-- Right Side - Content -->
+                    <div data-aos="fade-left" class="hidden md:block text-center md:text-left">
+                        <p class="text-2xl mb-6 font-semibold" style="color: #000000;">
+                            Здесь ежедневно публикуем актуальные подборки туров, советы и идеи для путешествий
+                        </p>
+                        <a href="https://t.me/iskratour" target="_blank" 
+                           class="inline-flex items-center space-x-3 px-8 py-4 rounded-xl text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 bg-gradient-main">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.21-1.13-.33-1.09-.7.02-.17.25-.35.7-.52 2.74-1.2 4.56-1.99 5.79-2.4 2.79-1.13 3.37-1.33 3.75-1.34.33-.01.52.04.71.18.15.12.21.28.2.47-.01.19-.04.22-.03.33 0 .11.02.14.03.23-.06.07-.02.12-.02.21 0 .03.01.05.01.08-.01.02-.02.02-.04.03z"/>
+                            </svg>
+                            <span class="font-semibold">Открыть Telegram-канал</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-12" style="background: linear-gradient(180deg, #FFFBFE 0%, #FFF0F5 50%, #FFE8F0 100%);">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-10" data-aos="fade-up" style="color: #000000;">
+                Как работает <span style="color: #ffb9d2;">iSKRA Tour</span>
+            </h2>
+            
+            <!-- Mobile condensed flow -->
+            <div class="md:hidden" data-aos="fade-up">
+                <div class="relative overflow-hidden rounded-3xl px-6 py-8 shadow-2xl border border-pink-100" style="background: linear-gradient(150deg, rgba(255, 221, 232, 0.95) 0%, #FFFFFF 55%, rgba(255, 221, 232, 0.85) 100%);">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full opacity-20" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);"></div>
+                    <div class="relative">
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="flex items-start gap-4 rounded-2xl px-4 py-3 bg-white/80 backdrop-blur-sm shadow-sm">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md">
+                                    <img src="images/png/заявка.png" alt="Заявка" class="w-8 h-8 object-contain" loading="lazy" decoding="async">
+                                </div>
+                                <div>
+                                    <p class="font-semibold" style="color: #000000;">Заявка</p>
+                                    <p class="text-sm text-gray-600">Напишите менеджеру в Telegram или отправьте заявку с сайта</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 rounded-2xl px-4 py-3 bg-white/80 backdrop-blur-sm shadow-sm">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md">
+                                    <img src="images/png/подбор тура.png" alt="Подбор тура" class="w-8 h-8 object-contain" loading="lazy" decoding="async">
+                                </div>
+                                <div>
+                                    <p class="font-semibold" style="color: #000000;">Подбор тура</p>
+                                    <p class="text-sm text-gray-600">Уточняем детали и пожелания и присылаем подборку в электронном виде</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 rounded-2xl px-4 py-3 bg-white/80 backdrop-blur-sm shadow-sm">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md">
+                                    <img src="images/png/Договор и оплата.png" alt="Договор и оплата" class="w-8 h-8 object-contain" loading="lazy" decoding="async">
+                                </div>
+                                <div>
+                                    <p class="font-semibold" style="color: #000000;">Договор и оплата</p>
+                                    <p class="text-sm text-gray-600">После выбора тура составляем договор в электронном виде и вы вносите предоплату (размер зависит от туроператора и времени до вылета)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 rounded-2xl px-4 py-3 bg-white/80 backdrop-blur-sm shadow-sm">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md">
+                                    <img src="images/png/бронирование.png" alt="Бронирование тура" class="w-8 h-8 object-contain" loading="lazy" decoding="async">
+                                </div>
+                                <div>
+                                    <p class="font-semibold" style="color: #000000;">Бронирование тура</p>
+                                    <p class="text-sm text-gray-600">После подтверждения от туропертаора высылаем на почту все документы по туру</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 rounded-2xl px-4 py-3 bg-white/80 backdrop-blur-sm shadow-sm">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md">
+                                    <img src="images/png/сопровождение.png" alt="Сопровождение" class="w-8 h-8 object-contain" loading="lazy" decoding="async">
+                                </div>
+                                <div>
+                                    <p class="font-semibold" style="color: #000000;">Сопровождение</p>
+                                    <p class="text-sm text-gray-600">Мы на связи 24/7 с момента бронирования до вашего возвращения домой</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <a href="#heroForm" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-base font-semibold shadow-md text-white transition-all duration-300 hover:scale-105 hover:shadow-xl" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8); text-decoration: none; width: 298.75px;">
+                                Оставить заявку
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hidden md:grid md:grid-cols-3 gap-6">
+                <div class="p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="100" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center rounded-full bg-white shadow-md">
+                        <img src="images/png/заявка.png" alt="Заявка" class="w-10 h-10 object-contain" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="color: #000000;">Заявка</h3>
+                    <p style="color: #000000;">Напишите менеджеру в Telegram или отправьте заявку с сайта</p>
+                </div>
+                
+                <div class="p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="200" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center rounded-full bg-white shadow-md">
+                        <img src="images/png/подбор тура.png" alt="Подбор тура" class="w-10 h-10 object-contain" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="color: #000000;">Подбор тура</h3>
+                    <p style="color: #000000;">Уточняем детали и пожелания и присылаем подборку в электронном виде</p>
+                </div>
+                
+                
+                <div class="p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="400" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center rounded-full bg-white shadow-md">
+                        <img src="images/png/Договор и оплата.png" alt="Договор и оплата" class="w-10 h-10 object-contain" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="color: #000000;">Договор и оплата</h3>
+                    <p style="color: #000000;">После выбора тура составляем договор в электронном виде и вы вносите предоплату (размер зависит от туроператора и времени до вылета)</p>
+                </div>
+                
+                <div class="p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="500" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center rounded-full bg-white shadow-md">
+                        <img src="images/png/бронирование.png" alt="Бронирование тура" class="w-10 h-10 object-contain" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="color: #000000;">Бронирование тура</h3>
+                    <p style="color: #000000;">После подтверждения от туропертаора высылаем на почту все документы по туру</p>
+                </div>
+                
+                <div class="p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="600" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center rounded-full bg-white shadow-md">
+                        <img src="images/png/сопровождение.png" alt="Сопровождение" class="w-10 h-10 object-contain" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="color: #000000;">Сопровождение</h3>
+                    <p style="color: #000000;">Мы на связи 24/7 с момента бронирования до вашего возвращения домой</p>
+                </div>
+
+                <div class="p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="700" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <div class="w-16 h-16 mb-4 mx-auto flex items-center justify-center rounded-full bg-white shadow-md">
+                        <img src="images/png/tel.png" alt="Оставить заявку" class="w-10 h-10 object-contain" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3" style="color: #000000;">Готовы к путешествию?</h3>
+                    <p class="mb-4" style="color: #000000;">Оставьте заявку, и я подберу идеальный тур под ваши желания.</p>
+                    <a href="#heroForm" class="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl text-base font-semibold shadow-md text-white transition-all duration-300 hover:scale-105 hover:shadow-xl" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8); text-decoration: none; width: 100%; max-width: 260px;">
+                        Оставить заявку
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-12" style="background: linear-gradient(135deg, #FFFBFE 0%, #FFE8F0 50%, #FFF0F5 100%);">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-10" data-aos="fade-up" style="color: #000000;">
+                Отзывы <span style="color: #ffb9d2;">клиентов</span>
+            </h2>
+            
+            <div class="relative" data-aos="fade-up">
+                <div class="relative bg-white rounded-3xl shadow-2xl border border-pink-100 overflow-hidden mx-auto" style="max-width: 600px; min-height: 150px;">
+                    <div id="testimonialsCarousel" class="flex transition-transform duration-700 ease-in-out" style="will-change: transform;">
+                        <div class="flex-shrink-0 w-full px-6 md:px-12 py-10" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%);">
+                            <div class="mx-auto text-center md:text-left" style="max-width: calc(100% - 80px);">
+                                <p class="mb-6 text-lg md:text-xl italic leading-relaxed" style="color: #696969; font-size: 20px;">
+                        "Отдыхали в Дубае в Voco Monaco. Новый современный отель с отличным пляжем и белым песком. Юлия быстро прислала подборку и видео, благодаря чему мы сразу определились с выбором. Это была наша первая поездка в Эмираты, и Юлия сопровождала нас на всех этапах. Всё прошло идеально — в следующий раз обратимся только к ней!"
+                    </p>
+                                <p class="font-semibold text-base md:text-lg" style="color: #FFB9D4; font-size: 18px;">— Камилла, Москва</p>
+                </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full px-6 md:px-12 py-10" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%);">
+                            <div class="mx-auto text-center md:text-left" style="max-width: calc(100% - 80px);">
+                                <p class="mb-6 text-lg md:text-xl italic leading-relaxed" style="color: #696969; font-size: 20px;">
+                        "Большое спасибо iSKRA Tour и Юлии!💖
+
+Ты буквально спасла наш отпуск: было сложно найти вариант и по бюджету, и в разгар осенних каникул, но всё получилось. Отель оказался идеальным — первая линия, отличный аквапарк для ребёнка и удобный заход в море. Отдых прошёл прекрасно. Спасибо за твоё внимание, терпение и заботу!"
+                    </p>
+                                <p class="font-semibold text-base md:text-lg" style="color: #FFB9D4; font-size: 18px;">— Татьяна, Пермь</p>
+                </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full px-6 md:px-12 py-10" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFFBFE 100%);">
+                            <div class="mx-auto text-center md:text-left" style="max-width: calc(100% - 80px);">
+                                <p class="mb-6 text-lg md:text-xl italic leading-relaxed" style="color: #696969; font-size: 20px;">
+                        "Юля, спасибо за отличный отдых! 💖
+
+
+
+Отдыхали в Bosphorus Sorgun 5* в августе 2025, и всё получилось идеально. Отель понравился: много еды и баров, красивый бассейн, горки, вечерние шоу и музыка — отдых прошёл на ура.
+
+Отдельное спасибо за индивидуальный трансфер — это очень сэкономило время и сделало поездку комфортнее. Экскурсия в каньон Тазы тоже зашла, особенно рафтинг."
+                    </p>
+                                <p class="font-semibold text-base md:text-lg" style="color: #FFB9D4; font-size: 18px;">— Марина, Москва</p>
+                </div>
+                        </div>
+                    </div>
+                    <div id="testimonialsIndicators" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10"></div>
+                    <button onclick="prevTestimonial()" class="absolute top-1/2 -translate-y-1/2 left-4 md:left-6 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-white/80 hover:bg-white shadow-md transition">
+                        <svg class="w-4 h-4 md:w-5 md:h-5 text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button onclick="nextTestimonial()" class="absolute top-1/2 -translate-y-1/2 right-4 md:right-6 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-white/80 hover:bg-white shadow-md transition">
+                        <svg class="w-4 h-4 md:w-5 md:h-5 text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- More Reviews Button -->
+            <div class="text-center mt-12">
+                <a href="https://t.me/iskra_otziv" target="_blank" class="inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-2xl transition-all duration-300 hover:scale-105 shadow-xl bg-gradient-main" style="color: white; text-decoration: none;">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.21-1.13-.33-1.09-.7.02-.17.25-.35.7-.52 2.74-1.2 4.56-1.99 5.79-2.4 2.79-1.13 3.37-1.33 3.75-1.34.33-.01.52.04.71.18.15.12.21.28.2.47-.01.19-.04.22-.03.33 0 .11.02.14.03.23-.06.07-.02.12-.02.21 0 .03.01.05.01.08-.01.02-.02.02-.04.03z"/>
+                    </svg>
+                    <span class="font-semibold">Больше отзывов в Telegram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-12" style="background: linear-gradient(180deg, #FFFBFE 0%, #FFF0F5 100%);">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-10" data-aos="fade-up" style="color: #000000;">
+                Часто задаваемые <span style="color: #ffb9d2;">вопросы</span>
+            </h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-pink-50 transition">
+                        <span class="font-semibold text-gray-800">Сколько стоит ваша работа?</span>
+                        <span class=" text-xl">+</span>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 text-gray-600">
+                        Моя консультация и подбор тура для вас бесплатны 💛<br><br>
+                        Мою работу оплачивает туроператор, а вы получаете цены напрямую, без переплат.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden" data-aos="fade-up" data-aos-delay="150">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-pink-50 transition">
+                        <span class="font-semibold text-gray-800">Как происходит подбор тура?</span>
+                        <span class=" text-xl">+</span>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 text-gray-600">
+                        Вы оставляете заявку на сайте, в Telegram-боте или пишете мне в WhatsApp.<br><br>
+                        Я уточняю детали (даты, бюджет, пожелания) и подбираю подходящие варианты с комментариями и советами.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden" data-aos="fade-up" data-aos-delay="250">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-pink-50 transition">
+                        <span class="font-semibold text-gray-800">Как проходит оплата тура?</span>
+                        <span class=" text-xl">+</span>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 text-gray-600">
+                        После согласования тура вы вносите предоплату (10–50% в зависимости от туроператора).<br><br>
+                        После оплаты я бронирую тур, и вам присваивается номер заявки для проверки.<br><br>
+                        Оставшуюся сумму оплачиваете за 2 недели до вылета.
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-pink-50 transition">
+                        <span class="font-semibold text-gray-800">Как убедиться, что бронь настоящая?</span>
+                        <span class=" text-xl">+</span>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 text-gray-600">
+                        Каждому бронированию присваивается официальный номер заявки.<br><br>
+                        Вы можете проверить его на сайте туроператора или запросить документы у меня — всё абсолютно прозрачно ✅
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden" data-aos="fade-up" data-aos-delay="350">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-pink-50 transition">
+                        <span class="font-semibold text-gray-800">Работаете ли вы с вылетами из других городов?</span>
+                        <span class=" text-xl">+</span>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 text-gray-600">
+                        Да, организую вылет из любого города России.<br><br>
+                        Главное — заранее сообщите удобные даты и направление.
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-pink-50 transition">
+                        <span class="font-semibold text-gray-800">Что нужно, чтобы оформить тур?</span>
+                        <span class=" text-xl">+</span>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 text-gray-600">
+                        Понадобятся паспорта всех участников поездки, e-mail и номер телефона для договора.<br><br>
+                        Если едут дети — свидетельства о рождении.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-pink-50 transition">
+                        <span class="font-semibold text-gray-800">Что, если тур отменится или изменятся условия?</span>
+                        <span class=" text-xl">+</span>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 text-gray-600">
+                        Я работаю только с официальными и проверенными туроператорами.<br><br>
+                        В случае изменений все решения принимаются по договору, а я сопровождаю вас на каждом этапе — до, во время и после поездки.
+                    </div>
+                </div>
+
+
+                <div class="faq-item bg-white rounded-lg shadow-md mb-4 overflow-hidden" data-aos="fade-up" data-aos-delay="600">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-pink-50 transition">
+                        <span class="font-semibold text-gray-800">Почему вам можно доверять?</span>
+                        <span class=" text-xl">+</span>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 text-gray-600">
+                        Я работаю официально, в составе лицензированного турагентства, и предоставляю все подтверждающие документы.<br><br>
+                        Моя цель — не просто продать тур, а сделать ваш отдых комфортным и безопасным ❤️
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 text-white" style="background: #ffb9d2;">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Начните планировать свой отдых уже сегодня!
+                </h2>
+                <p class="text-xl mb-8" style="color: #FFFBFE;">
+                    Оставьте заявку, и мы подберём идеальный тур для вас
+                </p>
+                
+                <form id="ctaForm" class="max-w-2xl mx-auto backdrop-blur-sm p-6 rounded-2xl" style="background: rgba(255, 255, 255, 0.15); border: 2px solid rgba(255, 255, 255, 0.3);">
+                    <!-- Honeypot field: скрытое поле, которое не должен заполнять человек -->
+                    <div style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">
+                        <label>Ваш сайт</label>
+                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <div class="grid gap-4 mb-2">
+                        <input type="text" name="name" placeholder="Ваше имя" required 
+                               class="px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white">
+                        
+                        <select name="contact_method" id="ctaContactMethod" required
+                                class="px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white">
+                            <option value="">Удобный способ связи</option>
+                            <option value="phone">Звонок</option>
+                            <option value="whatsapp">WhatsApp</option>
+                            <option value="telegram">Telegram</option>
+                            <option value="max">MAX</option>
+                            <option value="email">Почта</option>
+                        </select>
+                        
+                        <input type="text" name="contact" id="ctaContact" placeholder="Контакт" required 
+                               class="px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white" style="display: none;">
+                        
+                        <textarea name="wishes" placeholder="Пожелания по туру: даты, число туристов, направление и т.д." rows="3"
+                                  class="px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+
+                        <div class="flex items-start gap-2">
+                            <input type="checkbox" id="ctaFormConsent" name="consent" class="mt-1 w-5 h-5 rounded border-gray-300 text-pink-500 focus:ring-pink-500">
+                            <label for="ctaFormConsent" class="text-sm text-white cursor-pointer">
+                                <button type="button" id="openPrivacyFromCta" class="text-white hover:text-pink-200 underline text-left" style="font-size: 16px;">Даю согласие на обработку персональных данных</button>
+                            </label>
+                        </div>
+
+                        <button type="submit" 
+                                class="bg-white px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold" style="color: #FFB9D4;">
+                            Узнать про тур
+                        </button>
+                    </div>
+                    <div id="ctaFormMessage" class="form-message hidden"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <div class="sticky top-4 z-30 flex justify-end pr-6">
+                <button id="closePrivacyModal" type="button" class="w-11 h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M6 18L18 6"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-8" style="padding-top: calc(2rem + 20px);">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-bold text-center md:text-left" style="color: #FFB9D4;">🛡 Политика конфиденциаль<wbr>ности</h3>
+                </div>
+                
+                <div class="space-y-6 text-gray-700">
+                    <div class="border-l-4 pl-4" style="border-color: #FFB9D4;">
+                        <h4 class="text-xl font-bold mb-2">iSKRA Tour</h4>
+                        <p class="text-gray-600">Дата обновления: 15 января 2025</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-3">1. Общие положения</h4>
+                        <p class="mb-2">Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных пользователей сайта iSKRA Tour (далее — «Сайт», «Оператор», «Мы»).</p>
+                        <p>Используя Сайт, вы соглашаетесь с условиями настоящей Политики и даёте согласие на обработку своих персональных данных.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-3">2. Персональные данные, которые мы собираем</h4>
+                        <p class="mb-2">Мы собираем только те данные, которые необходимы для подбора тура и обратной связи:</p>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Имя и фамилия</li>
+                            <li>Контактный номер телефона</li>
+                            <li>Адрес электронной почты (если указан)</li>
+                            <li>Комментарий или пожелания, оставленные в форме заявки</li>
+                            <li>Технические данные (IP-адрес, cookies, параметры устройства, статистика посещений)</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-3">3. Цели обработки данных</h4>
+                        <p class="mb-2">Ваши данные используются исключительно для:</p>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Подбора и бронирования туров</li>
+                            <li>Связи с вами по заявке (звонок, сообщение, Telegram)</li>
+                            <li>Предоставления консультаций и предложений</li>
+                            <li>Отправки актуальных предложений (при отдельном согласии)</li>
+                            <li>Улучшения качества обслуживания и работы сайта</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-3">4. Правовые основания обработки</h4>
+                        <p>Обработка данных осуществляется на основании:</p>
+                        <ul class="list-disc ml-6 space-y-1 mt-2">
+                            <li>Федерального закона РФ №152-ФЗ «О персональных данных»</li>
+                            <li>Вашего согласия, выраженного через отправку формы на сайте</li>
+                            <li>Выполнения договорных обязательств при оформлении тура</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-3">5. Хранение и защита персональных данных</h4>
+                        <p class="mb-2">Мы принимаем все необходимые организационные и технические меры для защиты персональных данных от несанкционированного доступа, изменения, раскрытия или уничтожения.</p>
+                        <p>Данные хранятся на защищённых серверах и не передаются третьим лицам, за исключением случаев, предусмотренных законом (например, туроператорам для бронирования поездки).</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-3">6. Передача данных третьим лицам</h4>
+                        <p class="mb-2">Передача ваших данных возможна только:</p>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Туроператорам, авиакомпаниям, страховым компаниям — только для исполнения заявки</li>
+                            <li>В иных случаях — только с вашего письменного согласия</li>
+                        </ul>
+                        <p class="mt-2">Мы не продаём и не передаём персональные данные третьим лицам в коммерческих целях.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-3">7. Срок хранения данных</h4>
+                        <p>Персональные данные хранятся столько, сколько необходимо для выполнения целей обработки, либо до момента отзыва вашего согласия. После этого данные удаляются или анонимизируются.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-3">8. Права пользователя</h4>
+                        <p class="mb-2">Вы имеете право:</p>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Запросить информацию о том, какие данные мы храним</li>
+                            <li>Уточнить, обновить или удалить свои данные</li>
+                            <li>Отозвать согласие на обработку персональных данных</li>
+                            <li>Направить жалобу в Роскомнадзор, если считаете, что ваши права нарушены</li>
+                        </ul>
+                        <p class="mt-2">Для этого направьте запрос на электронную почту: info@iskra-tour.ru</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-3">9. Использование файлов cookie</h4>
+                        <p>Сайт использует cookie для корректной работы и анализа посещаемости. Вы можете в любой момент отключить использование cookie в настройках браузера — однако это может ограничить функционал сайта.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-3">10. Изменения политики</h4>
+                        <p>Мы можем время от времени обновлять настоящую Политику. Новая версия вступает в силу с момента публикации на сайте. Рекомендуем периодически просматривать страницу для ознакомления с актуальными условиями.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contacts" class="bg-gray-900 text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center gap-4 mb-2 text-center">
+                <div>
+                    <h3 class="text-2xl font-bold" style="color: #FFA3B5;">iSKRA Tour</h3>
+                </div>
+                
+                <!-- Moved privacy button to middle column -->
+                <div class="text-center">
+                    <button id="privacyPolicyLink" class="text-lg font-semibold text-gray-400 hover:text-white transition cursor-pointer">
+                        Политика конфиденциальности
+                    </button>
+                </div>
+                
+                <!-- Social icons moved to right column with updated styles -->
+                <div>
+                    <div class="footer-social-links">
+                        <!-- Website (Globe) -->
+                        <a href="https://iskra-tour.ru" target="_blank" rel="noopener noreferrer"
+                           class="footer-social-link"
+                           style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <svg class="w-6 h-6" fill="none" stroke="#FFFFFF" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- Telegram -->
+                        <a href="https://t.me/iskratour" target="_blank" rel="noopener noreferrer"
+                           class="footer-social-link"
+                           style="background: #229ED9;">
+                            <svg class="w-6 h-6 block" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+                                <path d="M9.036 14.572l-.377 5.31c.6 0 .9-.3 1.2-.6l2.734-2.53 5.716 4.182c1.053.6 1.826.3 2.11-1.1l3.77-17.52c.377-1.515-.566-2.09-1.6-1.8L1.93 8.79c-1.515.54-1.515 1.44-.27 1.854l5.28 1.6 12.29-7.77c.567-.36 1.063-.18.675.216L9.036 14.572z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/79167977999" target="_blank" rel="noopener noreferrer"
+                           class="footer-social-link"
+                           style="background: #25D366;">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#FFFFFF">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </a>
+
+                        <!-- MAX -->
+                        <a href="https://clck.ru/3RU2Bw" target="_blank" rel="noopener noreferrer"
+                           class="footer-social-link footer-social-link-max">
+                            <img src="images/webp/max_icon.webp" alt="MAX" class="footer-social-link-max-image" loading="lazy" decoding="async">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Divider and compact copyright -->
+            <div class="border-t border-gray-800 mt-3 pt-2 text-center text-gray-500 text-sm">
+                <p>© 2025 iSKRA Tour. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Mobile Logo (mobile only) -->
+    <div class="absolute md:hidden w-12 h-12 rounded-full flex items-center justify-center bg-white shadow-xl pointer-events-none overflow-hidden" style="top: 16px; left: 16px; z-index: 50; backdrop-filter: blur(6px);">
+        <picture>
+            <source srcset="images/webp/logo3.webp" type="image/webp">
+            <img src="images/png/logo3.png" alt="iSKRA Tour" class="w-full h-full object-cover" decoding="async">
+        </picture>
+    </div>
+
+    <!-- Floating Mobile Title (center, on hero background) -->
+    <div class="absolute md:hidden flex flex-col items-center pointer-events-none" style="top: 16px; left: 50%; transform: translateX(-50%); z-index: 50;">
+        <span class="text-2xl font-bold" style="color: #000000; text-align: center; width: 100%;">iSKRA Tour</span>
+        <div class="w-full mt-2" style="width: 180px; height: 3px; background: linear-gradient(to right, rgba(255, 185, 210, 0.3), rgba(255, 185, 210, 1) 20%, rgba(255, 185, 210, 1) 80%, rgba(255, 185, 210, 0.3));"></div>
+    </div>
+
+    <!-- Floating Mobile Menu Button -->
+    <button id="floatingMenuBtn" class="fixed md:hidden w-12 h-12 rounded-full flex items-center justify-center text-white shadow-xl" style="background: radial-gradient(circle at 30% 30%, rgba(255, 185, 210, 0.6), rgba(255, 138, 165, 0.6)); box-shadow: 0 12px 30px rgba(255, 138, 165, 0.15); top: 16px; right: 16px; z-index: 50; backdrop-filter: blur(6px);">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn" class="hidden fixed w-12 h-12 rounded-full items-center justify-center text-white shadow-xl" style="background: radial-gradient(circle at 30% 30%, rgba(255, 185, 210, 0.6), rgba(255, 138, 165, 0.6)); box-shadow: 0 12px 30px rgba(255, 138, 165, 0.15); bottom: 24px; right: 20px; z-index: 40; backdrop-filter: blur(6px);">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <!-- Modal for Directions -->
+    <div id="countryModal" class="modal hidden fixed inset-0 z-50 overflow-y-auto">
+        <div class="modal-overlay absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+        <div class="modal-container flex items-center justify-center min-h-screen p-4">
+            <div class="modal-content bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative z-10">
+                <div id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="fixed inset-0 hidden z-[60]">
+        <div id="aboutModalOverlay" class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+        <div class="relative flex items-center justify-center min-h-screen p-4">
+            <div class="relative w-full max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden about-modal-content">
+                <button id="aboutModalClose" type="button" class="absolute top-4 right-4 w-11 h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 z-50" style="background: linear-gradient(135deg, #FFB9D4, #FFADD8);">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M6 18L18 6"></path>
+                    </svg>
+                </button>
+                <div class="overflow-y-auto max-h-[90vh] pt-16 pb-10 px-6 md:px-10 space-y-8">
+                    <div class="grid gap-6 md:grid-cols-2">
+                        <div class="relative overflow-hidden rounded-2xl p-6 shadow-xl transition-all duration-300 hover:shadow-2xl group" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFF5F7 100%); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);">
+                            <div class="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-pink-200 to-transparent rounded-tr-full opacity-15 group-hover:opacity-25 transition-opacity duration-300"></div>
+                            <h3 class="text-lg font-bold mb-3 relative z-10" style="color: #000000;">Опыт и страсть к путешествиям</h3>
+                            <p class="text-sm leading-relaxed relative z-10" style="color: #000000;">
+                                Путешествия — часть моей жизни уже много лет. Я побывала во многих странах, а в некоторых довелось пожить, изучая культуру, атмосферу и особенности отдыха изнутри.
+                            </p>
+                        </div>
+                        <div class="relative overflow-hidden rounded-2xl p-6 shadow-xl transition-all duration-300 hover:shadow-2xl group" style="background: linear-gradient(135deg, #FFF5F7 0%, #FFFFFF 100%); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);">
+                            <div class="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-pink-200 to-transparent rounded-tl-full opacity-15 group-hover:opacity-25 transition-opacity duration-300"></div>
+                            <h3 class="text-lg font-bold mb-3 relative z-10" style="color: #000000;">Профессионализм</h3>
+                            <ul class="space-y-2 list-disc relative z-10" style="color: #000000; padding-left: 1rem;">
+                                <li class="text-sm" style="color: #000000;">Высшее образование в сфере туризма</li>
+                                <li class="text-sm" style="color: #000000;">Сертификат от ведущей школы Gi Travel Academy</li>
+                                <li class="text-sm" style="color: #000000;">Постоянное обучение и мониторинг обновлений на туристическом рынке</li>
+                            </ul>
+                        </div>
+                        <div class="relative overflow-hidden rounded-2xl p-6 shadow-xl flex flex-col transition-all duration-300 hover:shadow-2xl group" style="background: linear-gradient(135deg, #FFF5F7 0%, #FFFFFF 100%); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);">
+                            <div class="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-pink-200 to-transparent rounded-bl-full opacity-15 group-hover:opacity-25 transition-opacity duration-300"></div>
+                            <h3 class="text-lg font-bold mb-3 relative z-10" style="color: #000000;">О личном</h3>
+                            <p class="text-sm leading-relaxed flex-grow relative z-10" style="color: #000000;">
+                                Я мама и жена, поэтому прекрасно понимаю, как важно сделать отдых комфортным для всей семьи. Знаю все нюансы перелётов, проживания и развлечений с детьми — от выбора удобного отеля до правильного багажа.
+                            </p>
+                        </div>
+                        <div class="relative overflow-hidden rounded-2xl p-6 shadow-xl flex flex-col transition-all duration-300 hover:shadow-2xl group" style="background: linear-gradient(135deg, #FFFFFF 0%, #FFF5F7 100%); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);">
+                            <div class="absolute bottom-0 left-0 w-28 h-28 bg-gradient-to-tr from-pink-200 to-transparent rounded-tr-full opacity-15 group-hover:opacity-25 transition-opacity duration-300"></div>
+                            <h3 class="text-lg font-bold mb-3 relative z-10" style="color: #000000;">Мой подход</h3>
+                            <p class="text-sm leading-relaxed mb-3 relative z-10" style="color: #000000;">
+                                Я подбираю тур так, будто выбираю его для себя.
+                            </p>
+                            <p class="text-sm leading-relaxed flex-grow relative z-10" style="color: #000000;">
+                                Помогаю на каждом этапе: от первой заявки и выбора отеля до возвращения домой — чтобы вы чувствовали заботу и уверенность на протяжении всего путешествия.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pt-2 text-center">
+                        <a href="https://clck.ru/3QFNdi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-white bg-gradient-main" style="text-decoration: none;">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4 19h16a1 1 0 001-1V6a1 1 0 00-.553-.894l-8-4a1 1 0 00-.894 0l-8 4A1 1 0 003 6v12a1 1 0 001 1z"></path>
+                            </svg>
+                            Связаться со мной
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
+

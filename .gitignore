@@ -1,0 +1,60 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Windows alternate data streams
+*:Zone.Identifier
+
+# Secrets / private config
+.env
+.env.*
+!.env.example
+secure/
+Secure/
+var/
+**/secure/
+**/Secure/
+*_secrets.php
+*secrets*.php
+*.key
+*.pem
+*.crt
+*.p12
+
+# Hosting/runtime files
+logs/
+*.log
+*.log.*
+bin-tmp/
+tmp/
+temp/
+php-bin/
+php-bin-*/
+
+# Archives / backups
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*backup*
+*backup*.*
+*резерв*
+*резервная копия*
+
+# Python/cache
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Node/build caches, if used later
+node_modules/
+.cache/
